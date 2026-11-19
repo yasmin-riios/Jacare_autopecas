@@ -8,49 +8,12 @@ Sistema web para centralizar vendas, estoque e consulta de peças de uma loja de
 
 Projeto acadêmico da disciplina Análise de Sistemas, do curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas da Faculdade Serra Dourada (Altamira-PA).
 
-
-Sumário:
-
-
-Sobre o projeto
-
-Problema e objetivos
-
-Escopo
-
-Perfis de usuário
-
-Requisitos
-
-Regras de negócio
-
-Casos de uso
-
-Arquitetura
-
-Modelo de domínio
-
-Viabilidade
-
-Riscos
-
-Cronograma
-
-Próximos passos
-
-Equipe
-
-Sobre o projeto:
+# Sobre o projeto:
 
 A loja de autopeças controla vendas, estoque e identificação de peças de forma quase totalmente manual. A compatibilidade de uma peça com o modelo e o ano do veículo depende do conhecimento do vendedor e de consultas a catálogos online, e muitas peças são usadas e vêm de fornecedores de outros estados.
 
-Este repositório reúne a documentação e (futuramente) o código do sistema que resolve esses problemas.
-
-Problema e objetivos:
-
-Principais dores do processo atual (AS-IS):
-
 #	Dor	Efeito
+
 1	Busca manual de peças	Demora no atendimento e dificuldade de localizar a peça fisicamente
 
 2	Consulta a catálogos externos	Processo lento e risco de vender peça incompatível
@@ -61,9 +24,11 @@ Principais dores do processo atual (AS-IS):
 
 5	Reposição por observação	Compra de peças sem base em dados
 
-Objetivo geral: centralizar em um sistema web as informações de vendas, estoque e consulta de peças, facilitando o trabalho do gerente e dos vendedores.
+# Objetivo geral: 
 
-Objetivos específicos:
+centralizar em um sistema web as informações de vendas, estoque e consulta de peças, facilitando o trabalho do gerente e dos vendedores.
+
+# Objetivos específicos:
 
 Cadastrar e consultar peças com compatibilidade e localização
 
@@ -81,7 +46,7 @@ Escopo
 
 Dentro do escopo: UC01 a UC09 (usuários, peças, compatibilidade, estoque, preços, encomendas, vendas, trocas/devoluções e relatórios).
 
-Fora do escopo:
+# Fora do escopo:
 
 Emissão de nota fiscal (exigência fiscal ainda a validar)
 
@@ -91,7 +56,7 @@ Marketplaces
 
 Aplicativo móvel para o cliente
 
-Perfis de usuário:
+# Perfis de usuário:
 
 Perfil	Permissões
 
@@ -101,7 +66,7 @@ Vendedor	Consulta peças e estoque, negocia desconto (limitado pela margem), reg
 
 Cliente	Não usa o sistema; é atendido pelo vendedor no balcão
 
-Requisitos:
+# Requisitos:
 
 Requisitos funcionais:
 
@@ -141,7 +106,7 @@ RNF05	Usabilidade	Interface limpa e intuitiva, com treinamento rápido de novos 
 
 RNF06	Auditoria	Registro permanente de ações críticas (mudanças de preço, estornos etc.)
 
-Regras de negócio:
+# Regras de negócio:
 
 RN01: Preço de venda = custo + frete + margem de lucro
 
@@ -149,7 +114,7 @@ RN02: Desconto nunca pode reduzir o lucro abaixo da margem mínima definida pelo
 
 RN03: A reposição de estoque considera a média de vendas e a procura
 
-Casos de uso:
+# Casos de uso:
 
 ID	Caso de uso	Atores	Requisitos
 
@@ -174,7 +139,7 @@ UC09	Consultar relatórios gerenciais	Gerente	RF09
 
 Prioridade máxima (MVP): UC03, UC05 e UC07, considerados o "coração" da loja.
 
-Arquitetura:
+# Arquitetura:
 
 Decisão (ADR-001): monolito modular em camadas (apresentação, regras de negócio e acesso a dados), com módulos separados por Blueprints do Flask.
 
@@ -210,11 +175,11 @@ HTTPS e backup criptografado
 Trilha de auditoria de preços, descontos e operações importantes
 Coleta mínima de dados pessoais de clientes (nome e contato), conforme a LGPD (Lei nº 13.709/2018)
 
-Modelo de domínio:
+# Modelo de domínio:
 
 Entidades do diagrama conceitual: Usuário, Venda, Item de Venda, Categoria, Peça, Movimentação de Estoque e Compatibilidade da peça com veículos.
 
-Viabilidade:
+# Viabilidade:
 
 Todos os valores são hipóteses da equipe, não orçamentos contratados.
 
@@ -230,7 +195,7 @@ Econômica	Condicional: custo recorrente ~R$ 283/mês; desembolso mínimo em cai
 
 Premissas de dimensionamento: 1 gerente + até 4 vendedores (máx. 3 acessos simultâneos), até 5.000 peças, 30 a 60 vendas por dia, menos de 1 GB de dados no primeiro ano.
 
-Principais riscos:
+# Principais riscos:
 
 Risco	Prob.	Impacto	Mitigação
 
@@ -250,7 +215,7 @@ Acesso indevido	Baixa	Médio	Login individual, senhas seguras e perfis
 
 Informações incorretas de peças	Média	Médio	Confirmar com catálogos e fornecedores
 
-Cronograma estimado:
+# Cronograma estimado:
 
 Etapa	Semanas	Esforço
 
@@ -264,7 +229,7 @@ Etapa	Semanas	Esforço
    
 5. Carga de dados, treinamento e implantação	18 a 20	120 h
     
-Equipe:
+# Equipe:
 
 Felipe Deivid da Costa Saraiva
 
@@ -274,11 +239,3 @@ Lucas Vinicius Morais Pereira
 
 Yasmin Nicolly Carvalho Rios
 
-
-
-
-Instituição: Faculdade Serra Dourada, Altamira-PA
-
-Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
-
-Disciplina: Análise de Sistemas
