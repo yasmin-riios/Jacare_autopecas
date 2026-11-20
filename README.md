@@ -12,6 +12,16 @@ Projeto acadêmico da disciplina Análise de Sistemas, do curso Superior de Tecn
 
 A loja de autopeças controla vendas, estoque e identificação de peças de forma quase totalmente manual. A compatibilidade de uma peça com o modelo e o ano do veículo depende do conhecimento do vendedor e de consultas a catálogos online, e muitas peças são usadas e vêm de fornecedores de outros estados.
 
+# Protótipo
+
+Protótipo clicável do sistema JACARÉ PEÇAS, criado no Figma, com um fluxo para cada perfil de usuário.
+
+Perfil	Link do protótipo
+
+Gerente:	[Abrir protótipo do Gerente](https://www.figma.com/proto/2501PPguphZcmI0Avhh6xv/Jacare_pe%C3%A7as_gerente?node-id=0-1&t=ew2yK1gOVeO021hV-1)
+
+Vendedor:	[Abrir protótipo do Vendedor](https://www.figma.com/proto/o0j4ZiYToWzbAsh1tWzSZ3/JACARE-PECAS-vendedor.?node-id=0-1&t=v3n77IHkj4HidxjO-1)
+
 #	Dor	Efeito
 
 1	Busca manual de peças	Demora no atendimento e dificuldade de localizar a peça fisicamente
